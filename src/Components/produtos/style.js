@@ -39,8 +39,25 @@ export const FundoAzulMaisClaroSVG = styled.svg`
 
 export const FundoAzulEscuroSVG = styled.svg`
   position: absolute;
+  
   top: 720px;
   right: 241.32px;
 `;
 
-export default EstiloProduto;
+export const ConteudoProduto = styled.div`
+position: relative;
+bottom: 60%;
+display: flex;
+justify-content: center;
+padding: 20px 30px 30px 30px;
+
+z-index: 4;
+
+.liConteudoProduto{
+  width: 475px ;
+  height: 680px;
+  border-radius: 20px;
+  background-color: ${colors.azulclaro};
+  
+  }
+`;

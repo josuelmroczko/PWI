@@ -1,7 +1,27 @@
-import React from 'react';
-import { EstiloProduto, AzulMaisClaroSVG, AzulEscuroSVG, FundoAzulMaisClaroSVG, FundoAzulEscuroSVG } from './style';
+import React,{useState} from 'react';
+import { EstiloProduto, AzulMaisClaroSVG, AzulEscuroSVG, FundoAzulMaisClaroSVG, FundoAzulEscuroSVG, ConteudoProduto } from './style';
+import Calendario from '../calendario/calendario';
+import CarrinhoFinal from '../selecionarProdutos/carrinho';
+
+
+
 
 function Produto() {
+  
+  // Exemplo de estado para gerenciar a lista de itens no carrinho
+  const [cartItems, setCartItems] = useState([
+    { id: 1, name: 'Produto 1', price: 10.99 },
+    { id: 2, name: 'Produto 2', price: 15.99 },
+    // ... adicione outros itens se necessário
+  ]);
+
+  // Função para remover um item do carrinho
+  const handleRemoveFromCart = (itemToRemove) => {
+    const updatedCart = cartItems.filter((item) => item.id !== itemToRemove.id);
+    setCartItems(updatedCart);
+  };
+
+
   return (
     <EstiloProduto>
       <AzulMaisClaroSVG xmlns="http://www.w3.org/2000/svg" width="1516" height="267" viewBox="0 0 1516 267" fill="none">
@@ -19,6 +39,14 @@ function Produto() {
       </FundoAzulEscuroSVG>
       <div className='retanguloAzulEscuro
       '></div>
+
+      <ConteudoProduto>
+        <ul className='ulConteudoProduto'>
+          <li className='liConteudoProduto'> <Calendario/> </li>
+          <li className='liConteudoProduto'><CarrinhoFinal/></li>
+          <li className='liConteudoProduto'> </li>
+        </ul>
+      </ConteudoProduto>
       
     </EstiloProduto>
   );

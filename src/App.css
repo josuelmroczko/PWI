@@ -1,18 +1,11 @@
-*{
+* {
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
   margin: 0;
-  
-  ::-webkit-scrollbar {
-    width : 15px; /* Largura da barra de rolagem */
-  }
-  
-
 }
-body{
 
+body {
   margin: 0;
-
-
-  
+  width: 1516px; 
+  margin: 0 auto;
 }

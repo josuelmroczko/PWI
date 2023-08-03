@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+
 import logo from '../imagens/logo-thermas 1.png';
 import { StyleMenu } from './style.js';
 import Produto from '../produtos/produtos';
+
+
 
 function Menu() {
   const [linkAtivo, setLinkAtivo] = useState('Home');
@@ -47,7 +49,7 @@ function Menu() {
 
       {/* Renderizar o conteúdo correspondente ao link clicado */}
       {linkAtivo === 'Home' && <div className='conteudoBotoes' ><Produto/></div>}
-      {linkAtivo === 'Minha conta' && <div className='conteudoBotoes' >Conteúdo da página Minha conta</div>}
+      {linkAtivo === 'Minha conta' && <div className='conteudoBotoes' ></div>}
       {linkAtivo === 'Meus pedidos' && <div className='conteudoBotoes' >Conteúdo da página Meus pedidos</div>}
     </StyleMenu>
   );
