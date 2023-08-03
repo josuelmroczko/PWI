@@ -11,7 +11,7 @@ export const EstiloProduto = styled.div`
     position: relative;
     background-color: ${colors.azul};
     height: 450px;
-    width: 100vw;
+    width: 100%;
     bottom: 5px;
   }
 `;
