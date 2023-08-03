@@ -3,10 +3,16 @@
   box-sizing: 0;
   margin: 0;
   
+  ::-webkit-scrollbar {
+    width : 15px; /* Largura da barra de rolagem */
+  }
+  
+
 }
 body{
 
   margin: 0;
-  width: 100%;
+
+
   
 }

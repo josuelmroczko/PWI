@@ -2,6 +2,7 @@
 import './App.css';
 import Baner from './Components/baner/baner';
 import Menu from './Components/menu/menu';
+ 
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       
      <Menu/>
      <Baner/>
-
+     
     </div>
   );
 }

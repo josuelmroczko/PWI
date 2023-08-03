@@ -3,9 +3,10 @@ import styled from 'styled-components';
 
 export const StyleBaner  = styled.div`
 display: flex;
-width: 1512px;
+  width: 1516px;
+
   .baner{
-    width: 100vw;
+    width: 1516px;
     height: 550px;
   }
 

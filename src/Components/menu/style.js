@@ -4,7 +4,7 @@ import colors from '../cores/cores';
 
 export const StyleMenu = styled.div`
   display: flex;
-  width: 1512px;
+  width: 1516px;
   height: 100px;
   align-items: center;
   justify-content: space-between;
@@ -94,11 +94,9 @@ export const StyleMenu = styled.div`
   }
  
   .conteudoBotoes {
-   position: absolute;
-   text-align: center;
-   top: 500px;
-   width: 1512px
-   
+    position: absolute;
+    top:570px;
+ 
  
   }
 `;
