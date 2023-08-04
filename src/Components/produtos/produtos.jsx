@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { EstiloProduto, AzulMaisClaroSVG, AzulEscuroSVG, FundoAzulMaisClaroSVG, FundoAzulEscuroSVG, ConteudoProduto } from './style';
-import Calendario from '../calendario/calendario';
-import CarrinhoFinal from '../selecionarProdutos/carrinho';
+
+
 
 
 
@@ -39,12 +39,12 @@ function Produto() {
       </FundoAzulEscuroSVG>
       <div className='retanguloAzulEscuro
       '></div>
-
+      
       <ConteudoProduto>
         <ul className='ulConteudoProduto'>
-          <li className='liConteudoProduto'> <Calendario/> </li>
-          <li className='liConteudoProduto'><CarrinhoFinal/></li>
-          <li className='liConteudoProduto'> </li>
+          <li className='liConteudoProduto'></li>
+          <li className='liConteudoProduto'>   </li>
+          <li className='liConteudoProduto'></li>
         </ul>
       </ConteudoProduto>
       

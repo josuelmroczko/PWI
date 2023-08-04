@@ -1,5 +1,5 @@
 import './style.js'
-import baner from '../imagens/parque-aquatico-olimpia-thermas-dos-laranjais-capa-02 1.png'
+import baner from '../imagens/parque.png'
 import { StyleBaner } from './style.js'
 
 
