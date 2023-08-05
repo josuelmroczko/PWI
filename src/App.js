@@ -1,7 +1,7 @@
 
 import './App.css';
 import Baner from './Components/baner/baner';
-import CalendarioCarrinho from './Components/componentes/componentesPrincipal';
+import Footer from './Components/footer/footer';
 import Menu from './Components/menu/menu';
  
 
@@ -12,7 +12,7 @@ function App() {
       
      <Menu/>
      <Baner/>
-     <CalendarioCarrinho/> 
+     <Footer />
     </div>
   );
 }

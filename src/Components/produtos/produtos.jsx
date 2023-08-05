@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
-import { EstiloProduto, AzulMaisClaroSVG, AzulEscuroSVG, FundoAzulMaisClaroSVG, FundoAzulEscuroSVG, ConteudoProduto } from './style';
+import { EstiloProduto, AzulMaisClaroSVG, AzulEscuroSVG, FundoAzulMaisClaroSVG, FundoAzulEscuroSVG, ConteudoProduto, FooterMenu } from './style';
+import CalendarioCarrinho from '../componentes/componentesPrincipal';
+import Footer from '../footer/footer';
 
 
 
@@ -23,6 +25,7 @@ function Produto() {
 
 
   return (
+     <>
     <EstiloProduto>
       <AzulMaisClaroSVG xmlns="http://www.w3.org/2000/svg" width="1516" height="267" viewBox="0 0 1516 267" fill="none">
         <path d="M0 77.5161C129.205 77.5161 249.795 0 379 0C508.205 0 628.795 77.5161 758 77.5161C887.205 77.5161 1007.8 0 1137 0C1266.2 0 1386.8 77.5161 1516 77.5161V267H0V77.5161Z" fill="#002E6A"/>
@@ -43,12 +46,19 @@ function Produto() {
       <ConteudoProduto>
         <ul className='ulConteudoProduto'>
           <li className='liConteudoProduto'></li>
-          <li className='liConteudoProduto'>   </li>
+          <li className='liConteudoProduto'><CalendarioCarrinho/> </li>
           <li className='liConteudoProduto'></li>
         </ul>
+        
       </ConteudoProduto>
-      
+    
     </EstiloProduto>
+
+    
+     <FooterMenu>
+     <Footer/>
+     </FooterMenu>
+    </>
   );
 }
 

@@ -1,38 +1,76 @@
 import styled from 'styled-components';
+import colors from '../../cores/cores';
 
 export const CarrinhoContainer = styled.div`
-  width: 475px;
+  position: absolute;
+  display: flex;
+  width: 345px;
   height: 680px;
   border: 1px solid #ccc;
   padding: 10px;
-  left: 480px;
-   top: 10px;
-   border: none;
-  position: relative; /* Adicione a posição relativa ao contêiner do carrinho */
-  z-index: 55; /* Adicione o z-index para o carrinho ficar acima dos outros componentes */
-  
-  /* Adiciona margin-bottom de 100px para criar a distância entre os itens */
+  left: 1000px;
+  top: 10px;
+  border: none;
+  z-index: 55; 
+
   li {
-    margin-bottom: 100px;
+    position: relative;
+    display: flex;
+    background-color: ${colors.branco};
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--gray-6, #F2F2F2);
+  }
+
+  ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    overflow: scroll;
+    top: 10px;
+  }
+  h2{
+    position: relative;
+    top: -58px;
+    left: 100px;
+  }
+  p{
+    position: relative;
+    top: 530px;
+    right: 200px;
   }
 `;
 
 export const CarrinhoLista = styled.ul`
   list-style: none;
   padding: 0;
+  
 `;
 
-
 export const CarrinhoItem = styled.li`
+  position: relative;
+  left: 30px;
+  width: 416px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   span {
-    flex: 1;
+   position: relative;
+   top: -30px;
+   left: 10px;
   }
 
   button {
-    margin-left: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  
   }
+
+`;
+
+export const CupomInput = styled.input`
+  /* Estilos do input */
 `;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import colors from '../cores/cores';
 
+
 export const EstiloProduto = styled.div`
   position: relative;
   width: 1516px;
@@ -9,11 +10,13 @@ export const EstiloProduto = styled.div`
 
   .retanguloAzulEscuro {
     position: relative;
+    z-index: 2;
     background-color: ${colors.azul};
     height: 450px;
     width: 100%;
     bottom: 5px;
   }
+  
 `;
 
 export const AzulMaisClaroSVG = styled.svg`
@@ -21,7 +24,7 @@ export const AzulMaisClaroSVG = styled.svg`
   width: 1516px;
   top: 0px;
   left: 0px;
-  z-index: 2;
+  z-index: 3;
 `;
 
 export const AzulEscuroSVG = styled.svg`
@@ -61,3 +64,11 @@ z-index: 4;
   
   }
 `;
+export const FooterMenu = styled.footer`
+position:relative ;
+text-align: start;
+top: -120px;
+width: 1516px;
+
+
+`

@@ -11,7 +11,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 70px;
-  position: relative;
+  position: absolute;
+  left: 0px;
+  
   ::-webkit-scrollbar {
   display: none;
 }
@@ -20,8 +22,9 @@ const Container = styled.div`
 
 const PositionedContainer = styled.div`
   position: absolute;
-  top: 10px;
-  left: 0;
+  top: -50px;
+  left: 0px;
+  
   z-index: 10;
   display: flex;
   
@@ -35,10 +38,10 @@ const CalendarioCarrinho = () => {
   const produtos = [
     { id: 1, nome: 'Ingresso Diário Inteiro 2023', valor: 13 },
     { id: 2, nome: 'Ingresso Diário Inteiro 2023', valor: 23},
-    { id: 2, nome: 'Ingresso Diário Inteiro 2023', valor: 123 },
-    { id: 2, nome: 'Ingresso Diário Inteiro 2023', valor: 12 },
-    { id: 2, nome: 'Ingresso Diário Inteiro 2023', valor: 23 },
-    { id: 2, nome: 'Ingresso Diário Inteiro 2023', valor: 45 },
+    { id: 3, nome: 'Ingresso Diário Inteiro 2023', valor: 123 },
+    { id: 4, nome: 'Ingresso Diário Inteiro 2023', valor: 12 },
+    { id: 5, nome: 'Ingresso Diário Inteiro 2023', valor: 23 },
+    { id: 6, nome: 'Ingresso Diário Inteiro 2023', valor: 45 },
     // Adicione mais produtos conforme necessário
   ];
 
@@ -78,7 +81,7 @@ const CalendarioCarrinho = () => {
   };
 
   return (
-    <div className="App">
+    <div className="lista">
       <Container>
         <PositionedContainer>
           <Calendario selectedDate={selectedDate} handleDateChange={handleDateChange} />

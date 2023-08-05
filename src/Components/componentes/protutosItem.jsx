@@ -1,7 +1,7 @@
 import React from 'react';
-
 import HeaderListaProdutos from './CabecaListaProdutos';
-import { ListaProdutosContainer, ListaProdutosLista } from './estilos/listaStyle';
+import DataAtualTopoComponent from './DataAtualTopo'; // Importe o novo componente
+import { DataAtualTopo, ListaProdutosContainer, ListaProdutosLista } from './estilos/listaStyle';
 import ProdutoItem from './produtos';
 
 const ListaProdutos = ({ produtos, handleAdicionarCarrinho }) => {
@@ -9,14 +9,21 @@ const ListaProdutos = ({ produtos, handleAdicionarCarrinho }) => {
   const dataAtual = new Date();
 
   return (
-    <ListaProdutosContainer>
-      <HeaderListaProdutos data={dataAtual} />
-      <ListaProdutosLista>
-        {produtos.map((produto) => (
-          <ProdutoItem key={produto.id} produto={produto} handleAdicionarCarrinho={handleAdicionarCarrinho} />
-        ))}
-      </ListaProdutosLista>
-    </ListaProdutosContainer>
+    <>
+    <DataAtualTopo>
+     <h2>Selecione os produtos</h2>
+     <span>27/03/2023</span>
+ 
+
+    </DataAtualTopo>
+      <ListaProdutosContainer>
+        <ListaProdutosLista>
+          {produtos.map((produto) => (
+            <ProdutoItem key={produto.id} produto={produto} handleAdicionarCarrinho={handleAdicionarCarrinho} />
+          ))}
+        </ListaProdutosLista>
+      </ListaProdutosContainer>
+    </>
   );
 };
 

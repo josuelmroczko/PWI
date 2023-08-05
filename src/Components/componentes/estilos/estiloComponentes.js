@@ -22,6 +22,7 @@ export const ProdutoItem = styled.div`
 
 // Estilos do carrinho
 export const CarrinhoContainer = styled.div`
+
   border: 1px solid #ccc;
   padding: 10px;
   z-index: 55;
@@ -30,21 +31,26 @@ export const CarrinhoContainer = styled.div`
 export const DiaContainer = styled.div`
   display: flex;
   flex-direction: column;
+  
 `;
 
 export const DiaNumeroWrapper = styled.div`
+position: absolute;
+left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 `;
 
 export const DiaNumero = styled.div`
+
   font-size: 15px;
   color: ${(props) => (props.isMesAtual ? (props.isSelected ? '#FFFFFF' : '#000') : '#ccc')};
   color: ${(props) => (props.diaDaSemana === 6 || props.diaDaSemana === 0 ? 'red' : 'inherit')};
   /* Adicione um tamanho fixo para a div que envolve o número */
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   /* Defina a largura e altura iguais para obter um círculo perfeito */
   border-radius: 50%;
   /* Centralizar o número dentro do círculo */
