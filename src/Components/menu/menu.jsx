@@ -5,14 +5,17 @@ import { StyleMenu } from './style.js';
 import Produto from '../produtos/produtos';
 import LoginComponent from '../minhaConta/conta';
 import PedidoComponent from '../pedidos/Pedido';
+import DiscountComponent from '../meiaEstudante/meia';
 
 function Menu() {
   const [linkAtivo, setLinkAtivo] = useState('Home');
   const [exibirLogin, setExibirLogin] = useState(false);
+  const [exibirDesconto, setExibirDesconto] = useState(false); // Novo estado para controlar o componente de desconto
 
   const handleLinkClick = (link) => {
     setLinkAtivo(link);
     setExibirLogin(false);
+    setExibirDesconto(link === 'Meia estudante'); // Define o estado exibirDesconto como true se o link clicado for 'Meia estudante'
   };
 
   const handleMinhaContaClick = () => {
@@ -54,6 +57,16 @@ function Menu() {
             Meus pedidos
           </a>
         </li>
+
+        <li>
+          <a
+            href="#"
+            className={linkAtivo === 'Meia estudante' ? 'linkAtivo' : ''}
+            onClick={() => handleLinkClick('Meia estudante')}
+          >
+            Meia estudante
+          </a>
+        </li>
       </ul>
       <button className="button_duvidas">
         <p className="esclamacao">?</p> Dúvidas
@@ -63,10 +76,17 @@ function Menu() {
       {linkAtivo === 'Home' && <div className='conteudoBotoes'><Produto /></div>}
       {linkAtivo === 'Meus pedidos' && (
         <div className='conteudoBotoes'>
-          <PedidoComponent expanded /> {/* Adicione a propriedade 'expanded' para abrir o PedidoComponent */}
+          <PedidoComponent expanded />
         </div>
       )}
       {exibirLogin && <LoginComponent />}
+
+      {/* Renderizar o componente de desconto somente quando exibirDesconto for true */}
+      {exibirDesconto && (
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+          <DiscountComponent />
+        </div>
+      )}
     </StyleMenu>
   );
 }

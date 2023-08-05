@@ -9,9 +9,9 @@ const PedidoComponentWrapper = styled.div`
   bottom: -80px;
   padding: 20px;
   left: 0;
-  height:550px;
+  height: 550px;
   width: 1516px;
-  background-color:${colors.brancoFumaca};
+  background-color: ${colors.brancoFumaca};
   border: 1px solid #ccc;
 
   display: flex;
@@ -40,29 +40,29 @@ const PedidoComponentWrapper = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
-    /* 150% */
     background: var(--blue-500, #002E6A);
   }
 
   .content {
+    position: relative;
+    top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 140px;
-    background-color: ${colors.branco};
+    height: 200px;
+    background-color:transparent;
   }
 
   button {
-    background-color: #007bff;
-     
+    background-color:${colors.branco};
     width: 100%;
     padding: 8px 16px;
-    border: none;
+   border-bottom: 2px solid ${colors.cinzaClaro};
     border-radius: 4px;
     cursor: pointer;
     color: var(--blue-500, #002E6A);
     text-align: right;
- 
+
     font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
@@ -91,6 +91,7 @@ const PedidoComponentWrapper = styled.div`
     padding: 0;
     margin: 0;
 
+
     li {
       margin-bottom: 5px;
     }
@@ -98,15 +99,84 @@ const PedidoComponentWrapper = styled.div`
 
   /* Adicione a altura máxima para controlar o scroll */
   .scrollable-content {
+    position: relative;
+    top: -65px;
     max-height: 200px;
+    background-color: ${colors.branco};
+    height: 90px;
     display: flex;
-    overflow-y: auto;
-    /* Habilita a barra de rolagem vertical */
+   
+    
+    img{
+      position: relative;
+      bottom: 0px;
+      width: 90px;
+      left: 20px;
+    }
   }
-  img{
+
+  .ticket {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 0px;
+    width: 200px;
+    left: 20px;
+    p{
+      color: var(--laranja-600, #FF6022);
+
+/* Medium/16px */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+    }
+    span{
+      color: var(--cinza-500, #888);
+ 
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; 
+    }
+    i{
+       color: red;
+    }
+    ul {
+      position: relative;
+  
+      display: flex;
+      width: 500px;
+    }
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+
+  img {
     border: 1px solid ${colors.cinzaClaro};
     border-radius: 100%;
+    margin-right: 10px;
   }
+
+  .ul2{
+    position: relative;
+    width: 800px;
+    bottom:0px;
+    left: 350px;
+    display: flxex;
+    color: ${colors.cinzaClaro};
+    justify-content: space-between;
+  }
+  .li2 span{
+     color: ${colors.azul};
+  }
+
+
 `;
 
 const PedidoComponent = () => {
@@ -118,28 +188,29 @@ const PedidoComponent = () => {
 
   return (
     <PedidoComponentWrapper expanded={expanded}>
+      <h2 className='textodeexpandir'>Meia-Entrada Infantil</h2>
       <h2>Meus pedidos</h2>
       <div className="pedido-info">
-
-        
         <p> Pedido número 2539</p>
         <p>Realizado em abril de 2023</p>
       </div>
 
       <div className="content">
-        <button onClick={toggleExpand}>
-          <span className="button-text">
-            {expanded ? 'Voltar' : 'Meia-Entrada Infantil   Expandir'}
-          </span>
-        </button>
+      <button onClick={toggleExpand} style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <span className="button-text" style={{ marginRight: '590px' }}>Meia-Entrada Infantil</span>
+  <span className="button-text" style={{ marginLeft: '590px' }}>Expandir</span>
+</button>
+
 
         <div className="pedido-content">
           <div className="scrollable-content">
-            
-            <ul>
-              <li> <img src={ticket}/><p>Meia entrada infantil</p></li>
-              <li><span>Data visita</span> </li>
-        
+       
+             
+                <img src={ticket} alt="Ticket" />
+             <ul className='ticket'>
+               <li>  <p>Meia entrada infantil</p></li> 
+                <li>  <span>Data visita <i>03/08/2022</i></span> </li>
+           
             </ul>
             <ul className='ul2'>
               <li className='li2'>Quantidade <span>2</span></li>
@@ -148,9 +219,10 @@ const PedidoComponent = () => {
             </ul>
           </div>
         </div>
+       
       </div>
+    
     </PedidoComponentWrapper>
   );
 };
-
 export default PedidoComponent;
