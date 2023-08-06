@@ -20,3 +20,4 @@ const HeaderListaProdutos = ({ data }) => {
 };
 
 export default HeaderListaProdutos;
+

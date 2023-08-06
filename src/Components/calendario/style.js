@@ -75,7 +75,7 @@ const CalendarioWrapper = styled.div`
   .react-datepicker__header {
     border: none;
     position: relative;
-    background-color: white;
+    background-color: ${colors.branco};
     height: 63px;
     padding-top: 20px;
     padding-bottom: 15px;
@@ -117,7 +117,7 @@ const CalendarioWrapper = styled.div`
 
   .react-datepicker__day--selected {
     background-color: ${colors.azul};
-    color: white;
+    color: ${colors.branco};
     border-radius: 100%;
   }
 
@@ -170,7 +170,7 @@ const CalendarioWrapper = styled.div`
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
-    color: white;
+    color: ${colors.branco};
   }
 
   .opcoesCalendario p {
@@ -187,7 +187,7 @@ const CalendarioWrapper = styled.div`
     width: 25px;
     height: 25px;
     border-radius: 100%;
-    background-color: aliceblue;
+    background-color: red;
     color: red;
     text-align: center;
     line-height: 25px;

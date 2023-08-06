@@ -2,6 +2,9 @@ import React from 'react';
 import { CarrinhoContainer, CarrinhoItem } from './estilos/carrinhoStyle';
 import fotoPiscinas from '../imagens/piscinas.png'
 import { ProdutoImagem } from './estilos/listaStyle';
+import monetizationof from '../imagens/monetizationon (1).svg'
+import calendario from '../imagens/calendario.svg';
+import cifrao from '../imagens/monetization_.svg'
 
 const Carrinho = ({ carrinho, handleRemoverItem, handleAdicionarUm, handleRemoverUm }) => {
   const total = carrinho.reduce((total, item) => total + item.valor, 0);
@@ -14,15 +17,14 @@ const Carrinho = ({ carrinho, handleRemoverItem, handleAdicionarUm, handleRemove
         {carrinho.map((item) => (
           <CarrinhoItem key={item.id}>
             <ProdutoImagem src={fotoPiscinas} alt="Imagem do Produto" />
-            <span>{item.nome} - R${item.valor.toFixed(2)}</span>
-            <span>  {item.data.toLocaleDateString()}</span>
-            <button onClick={() => handleRemoverItem(item)}>X</button>
-            <button onClick={() => handleAdicionarUm(item)}>+1</button>
-            <button onClick={() => handleRemoverUm(item)}>-1</button>
+            <span className='valores'>{item.nome} <img src={monetizationof}  /> R${item.valor.toFixed(2)}</span>
+            <button className='fechar' onClick={() => handleRemoverItem(item)}>X</button>
+            <button className='maismenos' onClick={() => handleAdicionarUm(item)}>+1</button>
+            <button className='maismenos' onClick={() => handleRemoverUm(item)}>-1</button>
           </CarrinhoItem>
         ))}
       </ul>
-      <p>R${total.toFixed(2)}</p>
+      <p className='valorFinal'><img src={cifrao}/> R${total.toFixed(2)}</p>
     </CarrinhoContainer>
 );
 };

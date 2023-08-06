@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 import colors from '../../cores/cores';
 
+ 
+
 export const CalendarioContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  .calendar-wrapper {
-    
 
+  .calendar-wrapper {
+    /* Estilos para o wrapper do calendário, se necessário */
   }
+
   .react-calendar {
     position: relative;
     top: 100px;
@@ -17,12 +19,24 @@ export const CalendarioContainer = styled.div`
     border: none;
     background-color: transparent;
   }
+
   h2 {
     position: relative;
     color: antiquewhite;
     left: 90px;
     top: 10px;
+
+    color: var(--blue-500, #002E6A);
+ 
+
+ 
+font-family: Fredoka;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 31.92px;  
   }
+
   .react-calendar__tile {
     background-color: ${colors.azulclaro};
     border-radius: 100%;
@@ -30,26 +44,25 @@ export const CalendarioContainer = styled.div`
     padding: 0px;
     justify-content: center;
     align-items: center;
-    width: 30px;
-  
     
+     width: 30px;
   }
 
   .react-calendar__tile--active {
     background-color: #007bff;
     color: white;
+  }
 
-   
-  } .react-calendar__month-view__days__day {
+  .react-calendar__month-view__days__day {
     width: 5px;
   }
 
-.react-calendar__month-view__days{
-  max-width: 400px;
-  height: 250px;
-}
+  .react-calendar__month-view__days {
+    max-width: 400px;
+    height: 250px;
+  }
 
-.react-calendar {
+  .react-calendar {
     position: relative;
     top: 50px;
     left: 25%;
@@ -57,22 +70,19 @@ export const CalendarioContainer = styled.div`
     background-color: transparent;
   }
 
-  .react-calendar__navigation__label__labelText{
+  .react-calendar__navigation__label__labelText {
     color: ${colors.azul};
-
-
-
-font-family: Montserrat;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 21px; /* 150% */
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px; /* 150% */
   }
 `;
 
 export const CalendarioWrapper = styled.div`
-  margin-bottom: 20px;
-  
+  margin-bottom:  0px;
+
 `;
 
 export const ListaProdutosWrapper = styled.div`
@@ -89,7 +99,7 @@ export const ProdutoItem = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-
+  
   span {
     flex: 1;
   }
@@ -100,16 +110,12 @@ export const ProdutoItem = styled.div`
 `;
 
 export const FundoContainer = styled.div`
-
-    position: absolute;
-    background-color: aliceblue;
-    left: 65px;
-    top: 80px;
-    width: 414px;
-    height: 355px;
-    border-radius: 10px;
-
-
-
-
+  position: absolute;
+  background-color: aliceblue;
+  left: 65px;
+  top: 80px;
+  width: 414px;
+  height: 355px;
+  border-radius: 10px;
+ 
 `;

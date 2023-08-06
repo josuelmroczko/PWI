@@ -5,10 +5,8 @@ import colors from '../cores/cores';
 
 export const FooterContainer = styled.footer`
   height: 650px;
-   
   padding-top: 0px;
   background-image: url(${imgfooter});
-  
   width: 1516px;
   background-size: cover;
   overflow: hidden;
@@ -39,7 +37,7 @@ line-height: 31.92px; /* 159.6% */
      justify-content: center;
     text-align: center;
     top: 170px;
-    color: #002E6A;
+    color: ${colors.branco};
  
 font-family: Montserrat;
 font-size: 12px;
@@ -54,7 +52,6 @@ position: relative;
 width: 100%;
 display: flex;
 justify-content: space-evenly;
-
 align-items: start;
 top: 150px;
   
