@@ -5,7 +5,8 @@ import clubeMeia from './clube-das-criancas-skzoy 1.png'
 const StyledDiscountContainer = styled.div`
 position: absolute;
   display: flex;
-  align-items: flex-start; /* Alinhar itens ao topo do container */
+right: 157px;
+top: 491px;
   background-color: aliceblue;
   width: 1516px;
   margin: 0 auto;
@@ -14,7 +15,6 @@ position: absolute;
   img {
     width: 871px;
     height: 871px;
-    margin-right: 20px; /* Espaçamento à direita para separar a imagem dos outros elementos */
   }
 
   h1 {
@@ -62,7 +62,7 @@ const DiscountComponent = () => {
 
   return ( 
 
-    <meia>
+  
 
     <AbsoluteContainer>
       <StyledDiscountContainer>
@@ -92,7 +92,7 @@ const DiscountComponent = () => {
     </AbsoluteContainer>
 
 
-    </meia>
+ 
   );
 };
 
