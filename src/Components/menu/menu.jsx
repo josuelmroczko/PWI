@@ -6,6 +6,7 @@ import Produto from '../produtos/produtos';
 import LoginComponent from '../minhaConta/conta';
 import PedidoComponent from '../pedidos/Pedido';
 import DiscountComponent from '../meiaEstudante/meia';
+import Footer from '../footer/footer';
 
 function Menu() {
   const [linkAtivo, setLinkAtivo] = useState('Home');
@@ -66,13 +67,13 @@ function Menu() {
           >
             Meia estudante
           </a>
+        
         </li>
       </ul>
       <button className="button_duvidas">
         <p className="esclamacao">?</p> Dúvidas
       </button>
 
-      {/* Renderizar o conteúdo correspondente ao link clicado */}
       {linkAtivo === 'Home' && <div className='conteudoBotoes'><Produto /></div>}
       {linkAtivo === 'Meus pedidos' && (
         <div className='conteudoBotoes'>
@@ -81,7 +82,6 @@ function Menu() {
       )}
       {exibirLogin && <LoginComponent />}
 
-      {/* Renderizar o componente de desconto somente quando exibirDesconto for true */}
       {exibirDesconto && (
         <div style={{ position: 'absolute', top: '517px', left: '50%', transform: 'translate(-50%, -50%)',zIndex:'99' }}>
           <DiscountComponent />
