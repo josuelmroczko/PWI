@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const CalendarioContainer = styled.div`
-  /* Estilos para o container do calendário, se necessário */
-`;
-
+border:  12px solid black;
+`
 export const CalendarioWrapper = styled.div`
   /* Estilos para o wrapper do calendário, se necessário */
 `;

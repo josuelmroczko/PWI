@@ -77,6 +77,7 @@ export const CarrinhoItem = styled.li`
     padding: 5px;
     background-color: ${colors.branco};
     top: 1px;
+    z-index: 99;
     border: 1px solid ${colors.cinzaClaro};
     color: ${colors.laranjaAvermelhado};
   }

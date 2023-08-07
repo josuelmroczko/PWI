@@ -9,8 +9,8 @@ export const CalendarioContainer = styled.div`
   align-items: center;
 
   .calendar-wrapper {
-    /* Estilos para o wrapper do calendário, se necessário */
-  }
+    
+   }
 
   .react-calendar {
     position: relative;

@@ -3,7 +3,6 @@ import { CarrinhoContainer, CarrinhoItem } from './estilos/carrinhoStyle';
 import fotoPiscinas from '../imagens/piscinas.png'
 import { ProdutoImagem } from './estilos/listaStyle';
 import monetizationof from '../imagens/monetizationon (1).svg'
-import calendario from '../imagens/calendario.svg';
 import cifrao from '../imagens/monetization_.svg'
 
 const Carrinho = ({ carrinho, handleRemoverItem, handleAdicionarUm, handleRemoverUm }) => {
