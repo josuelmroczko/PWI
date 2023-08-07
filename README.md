@@ -1,5 +1,5 @@
-# Meu Projeto ReactJS para a PWI 
-
+# Meu Projeto ReactJS para a PWI   
+Gostaria de mencionar que o botão "Meia Estudante" está localizado junto à barra de menu apenas para exibir a página.
 ## Tecnologias Utilizadas
 
 - ReactJS
