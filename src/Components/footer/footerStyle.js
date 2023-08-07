@@ -10,7 +10,9 @@ export const FooterContainer = styled.footer`
   width: 1516px;
   background-size: cover;
   overflow: hidden;
-
+ a{
+  text-decoration: none;
+ }
   P{
     color:${colors.branco} ;
 

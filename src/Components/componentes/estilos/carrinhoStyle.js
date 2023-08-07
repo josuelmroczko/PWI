@@ -73,8 +73,12 @@ export const CarrinhoItem = styled.li`
   justify-content: space-between;
   align-items: center;
   .maismenos{
+    position: relative;
+    display: flex;
+    flex-direction: column;
     border-radius: 100%;
     padding: 5px;
+   
     background-color: ${colors.branco};
     top: 1px;
     z-index: 99;
@@ -91,6 +95,7 @@ export const CarrinhoItem = styled.li`
   button {
     position: relative;
     display: flex;
+    
     left: -20px;
     display: flex;
     flex-direction: column;

@@ -16,7 +16,7 @@ Gostaria de mencionar que o botão "Meia Estudante" está localizado junto à ba
 
 4. npm start
 
-
+ Caso ocorra um problema com a versão do Node, execute no terminal o comando ' npm install --lts '. Isso possivelmente irá corrigir o erro
  
  ## Agradecimentos
 
